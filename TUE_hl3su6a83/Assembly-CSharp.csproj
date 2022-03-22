@@ -36,127 +36,127 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModule.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerState.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviderFactory.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\IGvrInputModuleController.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerEventData.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\EditorControllerProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerState.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrRecenterOnlyController.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerUtils.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\ButtonEvent.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\TouchPadEvent.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\ArmModel\GvrArmModel.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrXREventsSubscriber.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerEventDataExtension.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerVisualMulti.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerGraphicRaycaster.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\EmulatorControllerProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\IGvrEventExecutor.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Cardboard\GvrReticlePointer.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\FloatEvent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrErrorType.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\IGvrPointerHoverHandler.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\MouseControllerProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\EmulatorKeyboardProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Permissions\GvrPermissionsRequester.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\GvrEditorEmulator.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardState.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerInputDevice.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrLaserVisual.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetState.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\PropertyDrawers\GvrInfo.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerPhysicsRaycaster.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrRecenterFlags.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\IControllerProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\InstantPreview\Internal\InstantPreview.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorDataTypes.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\GvrSettings.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Tooltips\GvrTooltip.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviderFactory.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\Vector3Event.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaAndroidNativeControllerInputProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrExecuteEventsExtension.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\IKeyboardProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrRecenterEventType.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\VideoControlsManager.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerReticleVisual.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\InstantPreview\InstantPreviewHelper.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\KeyboardDemo\KeyboardDelegateExample.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInfoPanel.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaSettings.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\IGvrScrollSettings.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\InstantPreview\Internal\InstantPreviewControllerProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\AndroidNativeShimControllerProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\GvrCardboardHelpers.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Internal\EditorCameraOriginDict.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Tooltips\GvrControllerTooltipsSimple.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerScrollInput.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrEventType.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrScrollSettings.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrMathHelpers.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorClientSocket.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\AndroidNativeKeyboardProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\HelloVR\ObjectController.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaSettingsProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrBasePointer.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\SwitchVideos.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\GvrKeyboard.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrControllerInputDeviceExtension.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrAllEventsTrigger.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\ArmModel\IGvrArmModelReceiver.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaEditorControllerInputProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\ArmModel\GvrBaseArmModel.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorConfig.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorManager.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\BoolEvent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrActivityHelper.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrSafetyRegionType.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\HelloVR\HelloVRManager.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\DummyKeyboardProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerVisual.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\GvrKeyboardDelegateBase.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModuleImpl.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\PermissionsDemo\PermissionsFlowManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\ScrubberEvents.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\GameObjectEvent.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\VideoPlayerReference.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrLaserPointer.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\AutoPlayVideo.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\TransformEvent.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\IHeadsetProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Pose3D.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\DummyControllerProvider.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\IGvrControllerInputDeviceReceiver.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerInput.cs" />
-     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\Vector2Event.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetEnums.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\UI\GvrDropdown.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrTrackedController.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\GvrUnitySdkVersion.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
-     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrEventExecutor.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrXREventsSubscriber.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\IGvrEventExecutor.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\FloatEvent.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaAndroidNativeControllerInputProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\KeyboardDemo\KeyboardDelegateExample.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorClientSocket.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\AutoPlayVideo.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Demos\Scripts\DemoObjectController6DoF.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerGraphicRaycaster.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\InstantPreview\Internal\InstantPreview.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaSettings.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\AndroidNativeShimControllerProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrControllerInputDeviceExtension.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\IGvrControllerInputDeviceReceiver.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\AndroidNativeHeadsetEnums.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrRecenterFlags.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\DummyKeyboardProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrLaserPointer.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\Vector2Event.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\PropertyDrawers\GvrInfoDrawer.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrBasePointerRaycaster.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\GvrKeyboardIntent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrDaydreamApi.cs" />
-     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\Generated\PhoneEvent.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviderFactory.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\InstantPreview\InstantPreviewHelper.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\GvrCardboardHelpers.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\UI\GvrDropdown.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\TouchPadEvent.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerVisualMulti.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Cardboard\GvrReticlePointer.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerPhysicsRaycaster.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrRecenterEventType.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\VideoControlsManager.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInfoPanel.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrScrollSettings.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrMathHelpers.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrAllEventsTrigger.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\BoolEvent.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\IGvrInputModuleController.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerEventDataExtension.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\GvrEditorEmulator.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorDataTypes.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\IKeyboardProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Tooltips\GvrControllerTooltipsSimple.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\GvrKeyboard.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaEditorControllerInputProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrSafetyRegionType.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\Generated\PhoneEvent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\DummyHeadsetProvider.cs" />
-     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.13.0\Hello Cardboard\Scripts\VrModeController.cs" />
-     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.13.0\Hello Cardboard\Scripts\ObjectController.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviderFactory.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Tooltips\GvrTooltip.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaSettingsProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\ArmModel\GvrBaseArmModel.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\HelloVR\HelloVRManager.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\GvrKeyboardDelegateBase.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\GameObjectEvent.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\VideoPlayerReference.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\DummyControllerProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\GvrUnitySdkVersion.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\EmulatorKeyboardProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerInput.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\EmulatorControllerProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\MouseControllerProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\IControllerProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerScrollInput.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrBasePointer.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModule.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetState.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Internal\EditorCameraOriginDict.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\HelloVR\ObjectController.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\SwitchVideos.cs" />
      <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.13.0\Hello Cardboard\Scripts\CardboardStartup.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\ArmModel\IGvrArmModelReceiver.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\InputModule\GvrPointerInputModuleImpl.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrBasePointerRaycaster.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerState.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\ArmModel\GvrArmModel.cs" />
+     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.13.0\Hello Cardboard\Scripts\ObjectController.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerInputDevice.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\InstantPreview\Internal\InstantPreviewControllerProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\IGvrPointerHoverHandler.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardState.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\Vector3Event.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerInput.cs" />
+     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerState.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerReticleVisual.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\IGvrScrollSettings.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorManager.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerVisual.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\TransformEvent.cs" />
      <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.13.0\Hello Cardboard\Scripts\CameraPointer.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrTrackedController.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerUtils.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\PropertyDrawers\GvrInfo.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrExecuteEventsExtension.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\PermissionsDemo\PermissionsFlowManager.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\IHeadsetProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Pose3D.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerProviders\EditorControllerProvider.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrRecenterOnlyController.cs" />
+     <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\ButtonEvent.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Permissions\GvrPermissionsRequester.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\GvrSettings.cs" />
+     <Compile Include="Assets\GoogleVR\Scripts\Headset\Enums\GvrEventType.cs" />
+     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.13.0\Hello Cardboard\Scripts\VrModeController.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
      <None Include="Assets\GoogleVR\Beta\Shaders\GvrSeeThroughUI.shader" />
@@ -405,10 +405,10 @@
         <HintPath>D:/Unity/Hub/Editor/2021.1.19f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/Unity/Hub/Editor/2021.1.19f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -756,82 +756,82 @@
         <HintPath>D:/Unity/Hub/Editor/2021.1.19f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="VSSettingsProvider">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/VSSettingsProvider.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Management">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core.Editor">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="VSSettingsProvider">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/VSSettingsProvider.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Google.XR.Cardboard.Editor">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Google.XR.Cardboard.Editor.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Google.XR.Cardboard.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Google.XR.Cardboard">
-        <HintPath>D:/Unity/Hub/Editor/TUE_hl3su6a83/Library/ScriptAssemblies/Google.XR.Cardboard.dll</HintPath>
+        <HintPath>D:/Unity_git/TUE_grass-mud-horse/TUE_hl3su6a83/Library/ScriptAssemblies/Google.XR.Cardboard.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
