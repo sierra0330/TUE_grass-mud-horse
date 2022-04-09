@@ -18,8 +18,13 @@ public class Button : MonoBehaviour
         
     }
 
-    public void ChangeScene01()
+    public void SceneSwitch(int SceneID)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneID);
+    }   
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
