@@ -160,11 +160,11 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
-     <Compile Include="Assets\SierraScript\Script\Ball.cs" />
      <Compile Include="Assets\SierraScript\Script\Button.cs" />
      <Compile Include="Assets\SierraScript\Script\GlobalControl.cs" />
      <Compile Include="Assets\SierraScript\Script\HoldAction.cs" />
      <Compile Include="Assets\SierraScript\Script\LlamaAction.cs" />
+     <Compile Include="Assets\SierraScript\Script\LlamaAction1.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
      <None Include="Assets\GoogleVR\Beta\Shaders\GvrSeeThroughUI.shader" />

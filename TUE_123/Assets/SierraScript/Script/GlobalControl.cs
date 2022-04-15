@@ -7,7 +7,7 @@ public class GlobalControl : MonoBehaviour
 
     public static GlobalControl Instance;
 
-    public bool llamaWool = false;
+    
 
     void Awake()
     {
@@ -24,12 +24,11 @@ public class GlobalControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(llamaWool);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

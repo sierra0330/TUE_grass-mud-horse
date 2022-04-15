@@ -2318,7 +2318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20afae8124e751f4598aadadc081da65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 5
+  LlamaFull: 0
+  Timer: 0
+  LlamaEat: 0
 --- !u!1 &1606151268
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,8 @@ public class LlamaAction : MonoBehaviour
     public float WalkRadius;
 
     //canvas 圖片
-    GameObject LlamaCanvasGroup;
-    GameObject LlamaImages;
+    public GameObject LlamaCanvasGroup;
+    public GameObject LlamaImages;
     public Sprite Pic1;
     public Sprite Pic2;
 
@@ -31,8 +31,8 @@ public class LlamaAction : MonoBehaviour
     bool LlamaFull = false;
     bool WantEat = false;
 
-    float Timer1;
-    float Timer2;
+    float Timer1 = 0.0f;
+    float Timer2 = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +41,6 @@ public class LlamaAction : MonoBehaviour
         LlamaOriginPos = Llama.transform.position;
         LlamaRotationY = Llama.transform.eulerAngles.y;
         LlamaRotation = Llama.transform.rotation;
-        LlamaCanvasGroup = GameObject.FindGameObjectWithTag("LlamaCanvas");
-        LlamaImages = GameObject.FindGameObjectWithTag("LlamaImages");
         
     }
 
