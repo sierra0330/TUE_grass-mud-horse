@@ -164,7 +164,6 @@
      <Compile Include="Assets\SierraScript\Script\GlobalControl.cs" />
      <Compile Include="Assets\SierraScript\Script\HoldAction.cs" />
      <Compile Include="Assets\SierraScript\Script\LlamaAction.cs" />
-     <Compile Include="Assets\SierraScript\Script\LlamaAction1.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
      <None Include="Assets\GoogleVR\Beta\Shaders\GvrSeeThroughUI.shader" />

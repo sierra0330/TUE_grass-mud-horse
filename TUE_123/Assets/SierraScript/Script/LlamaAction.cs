@@ -50,6 +50,7 @@ public class LlamaAction : MonoBehaviour
         //發呆的llama（State = 0）
         if(State == 0)
         {
+            //吃草
             if(!LlamaFull)
             {
                 if(HoldAction.InHands && HoldAction.IsBarrel)
@@ -90,7 +91,9 @@ public class LlamaAction : MonoBehaviour
                     LlamaSkin.GetComponent<SkinnedMeshRenderer>().material.color = Color.red;
                 }
             }
+
         }
+
 
         //走路的llama（State == 1）
         else if (State == 1)
@@ -224,7 +227,7 @@ public class LlamaAction : MonoBehaviour
         {
             if(Llama.transform.eulerAngles.y != LlamaRotationY)
             {   
-                Llama.transform.rotation = Quaternion.Lerp(Llama.transform.rotation, LlamaRotation, Time.deltaTime * 15);
+                Llama.transform.rotation = Quaternion.Lerp(Llama.transform.rotation, LlamaRotation, Time.deltaTime * 5);
             }
             else
             {
@@ -282,5 +285,7 @@ public class LlamaAction : MonoBehaviour
             LlamaCanvasGroup.GetComponent<CanvasGroup>().alpha = 0;
         }
     }
+
+
 
 }
