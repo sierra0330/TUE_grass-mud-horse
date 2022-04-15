@@ -162,8 +162,9 @@
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
      <Compile Include="Assets\SierraScript\Script\Ball.cs" />
      <Compile Include="Assets\SierraScript\Script\Button.cs" />
-     <Compile Include="Assets\SierraScript\Script\Llama.cs" />
-     <Compile Include="Assets\SierraScript\Script\LlamaEat.cs" />
+     <Compile Include="Assets\SierraScript\Script\GlobalControl.cs" />
+     <Compile Include="Assets\SierraScript\Script\HoldAction.cs" />
+     <Compile Include="Assets\SierraScript\Script\LlamaAction.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
      <None Include="Assets\GoogleVR\Beta\Shaders\GvrSeeThroughUI.shader" />

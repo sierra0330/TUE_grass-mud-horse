@@ -42,7 +42,11 @@ public class Ball : MonoBehaviour
             //將clone球帶入到攝影機為母體裡面（套用攝影機的位置）
             ballClone.transform.SetParent(camera.transform);
             //將clone球的位置透過自身的位置做改變
-            ballClone.transform.localPosition = new Vector3(0f, -0.2f, 0.35f);
+            //ballClone.transform.localPosition = new Vector3(0f, -0.2f, 0.35f);
+
+            ballClone.transform.localPosition = new Vector3(0f, -0.2f, 0.5f);
+            ballClone.transform.localRotation = Quaternion.Euler(-27, 55, 0);
+
             inHands = true;
         }
         else{
