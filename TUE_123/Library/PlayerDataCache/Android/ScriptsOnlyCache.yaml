@@ -31,7 +31,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Main.unity:
+    Assets/Scenes/Home.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -108,82 +108,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 238
       Script: {instanceID: 0}
-    Assets/Scenes/Menu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11310}
-    - Class: 114
-      Script: {instanceID: 11312}
-    - Class: 114
-      Script: {instanceID: 11314}
-    - Class: 114
-      Script: {instanceID: 11316}
-    - Class: 114
-      Script: {instanceID: 11572}
-    - Class: 114
-      Script: {instanceID: 11768}
-    - Class: 114
-      Script: {instanceID: 12852}
-    - Class: 114
-      Script: {instanceID: 12860}
-    - Class: 114
-      Script: {instanceID: 12992}
-    - Class: 114
-      Script: {instanceID: 13036}
-    - Class: 114
-      Script: {instanceID: 13372}
-    - Class: 114
-      Script: {instanceID: 13402}
-    - Class: 114
-      Script: {instanceID: 13456}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 124
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 238
-      Script: {instanceID: 0}
-    Assets/Scenes/Scene2.unity:
+    Assets/Scenes/Scene1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -1015,7 +940,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Menu.unity
-  - Assets/Scenes/Main.unity
-  - Assets/Scenes/Scene2.unity
-  playerPath: C:/Users/USER/Documents/GitHub/TUE_grass-mud-horse/TUE_123/output/output.apk
+  - Assets/Scenes/Home.unity
+  - Assets/Scenes/Scene1.unity
+  playerPath: D:/Unity_git/TUE_grass-mud-horse/TUE_123/output/output.apk
