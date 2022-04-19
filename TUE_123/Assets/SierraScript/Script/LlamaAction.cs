@@ -6,33 +6,40 @@ using UnityEngine.UI;
 
 public class LlamaAction : MonoBehaviour
 {
-
+    
     public int State;
     public NavMeshAgent Llama;
-    public float StopDis;
-    public GameObject LlamaSkin;
-    public float WalkRadius;
+    GameObject Llamaskin;
 
-    //canvas 圖片
-    public GameObject LlamaCanvasGroup;
-    public GameObject LlamaImages;
-    public Sprite Pic1;
-    public Sprite Pic2;
-
-
+    // Camera
     GameObject Camera;
 
-    // llama位置狀態
+    // Llama's position
+    public int StopDis = 5;
+    public int WalkRadius = 10;
     Vector3 LlamaOriginPos;
     float LlamaRotationY;
     Quaternion LlamaRotation;
 
+    // Canvas
+    GameObject LlamaCanvasGroup;
+    GameObject LlamaImages;
+    public Sprite Pic1;
+    public Sprite Pic2;
 
+    // Llama's state judge
     bool LlamaFull = false;
-    bool WantEat = false;
+    bool LlamaWool = false;
+    bool Arrival = false;
+    bool GrowWool = false;
 
+    //Llama's time
     float Timer1 = 0.0f;
     float Timer2 = 0.0f;
+
+    // Llama's child component
+    public Transform[] LlamaChild;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,191 +49,236 @@ public class LlamaAction : MonoBehaviour
         LlamaRotationY = Llama.transform.eulerAngles.y;
         LlamaRotation = Llama.transform.rotation;
         
+        // 抓取Llama的子物件
+        LlamaChild = Llama.GetComponentsInChildren<Transform>();
+        for(int i = 0; i < LlamaChild.Length; i++)
+        {
+            //Debug.Log(i + " " + LlamaChild[i]);
+            Llamaskin = LlamaChild[6].gameObject;
+            LlamaCanvasGroup = LlamaChild[7].gameObject;
+            LlamaImages = LlamaChild[8].gameObject;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //發呆的llama（State = 0）
-        if(State == 0)
-        {
-            //吃草
+        if(State == 0){
+            // Llama餵食判斷
             if(!LlamaFull)
             {
-                if(HoldAction.InHands && HoldAction.IsBarrel)
+                if(HoldAction.IsBarrel)
                 {
-                    HoldGrass();
+                    HoldThing();
                 }
-                //返回原點
                 else
-                {   
-                    LlamaCanvas(false, 0);
+                {
+                    ReturnOrigin();
+                }
+            }
+            else
+            { 
+                if(!GrowWool)
+                {
+                    Timer1 += Time.deltaTime;
+                    if(Timer1 >= 5.0f)
+                    {
+                        ReturnOrigin();
+                        if(Timer1 >= 30.0f)
+                        {
+                            GrowWool = true;
+                            Wool(true);
+                        }
+                    }
+                    else
+                    {
+                        // Canvas
+                        LlamaCanvas(true, 2);
+                    }
+                }
+            }
+
+            // Llama剪毛判斷
+            if(LlamaWool)
+            {
+                if(HoldAction.IsScissers)
+                {
+                    HoldThing();
+                }
+                else
+                {
                     ReturnOrigin();
                 }
             }
             else
             {
-                Timer1 += Time.deltaTime;
-                if(WantEat)
+                if(GrowWool)
                 {
-                    //在原地吃5f時間，再回到原地
-                    if(Timer1 >= 5.0f)
+                    Timer1 += Time.deltaTime;
+                    ReturnOrigin();
+                
+                    if(Timer1 >= 20.0f)
                     {
-                        LlamaCanvas(false, 0);
-                        ReturnOrigin();
-                        //過30f時間，長毛
-                        if(Timer1 >= 30f)
-                        {
-                            WantEat = false;
-                        }
+                        GrowWool = false;
+                        LlamaFull = false;
                     }
-                    else
-                    {
-                        LlamaCanvas(true, 2);
-                    }
-                }
-                else
-                {
-                    //長毛
-                    LlamaSkin.GetComponent<SkinnedMeshRenderer>().material.color = Color.red;
                 }
             }
-
         }
 
-
-        //走路的llama（State == 1）
-        else if (State == 1)
+        else if(State == 1)
         {
             if(!LlamaFull)
             {
-                if(HoldAction.InHands && HoldAction.IsBarrel)
+                if(HoldAction.IsBarrel)
                 {
-                    HoldGrass();
+                    HoldThing();
                     Timer2 = 0.0f;
-
                 }
                 else
                 {
-                    LlamaCanvas(false, 0);
-
-                    //判斷走路的llama中途將原本的目的地（攝影機的位置）中斷，變成現在所在的位置
-                    //所以每當拿起草，計時器就會刷新，放回草時，開始計時
-                    //目的就是將原本 要到達攝影機的位置，才開始隨便走的情況中斷
-                    //直接就是中途直接換成隨便走的情況
                     Timer2 += Time.deltaTime;
-                    if(Timer2 >= 0.5f)
+                    if(Timer2 >= 0.3f)
                     {
-                        if(Llama.remainingDistance <= Llama.stoppingDistance)
+                        LlamaWander(true);
+                    }
+                    else
+                    {
+                        LlamaWander(false);
+                    }
+                }
+            }   
+            else
+            {
+                if(!GrowWool)
+                {
+                    Timer1 += Time.deltaTime;
+                    if(Timer1 >= 5.0f)
+                    {
+                        LlamaWander(true);
+                        if(Timer1 >= 30.0f)
                         {
-                            Llama.SetDestination(RandomNavMeshLocation());
+                            GrowWool = true;
+                            Wool(true);
                         }
                     }
                     else
                     {
-                        Llama.SetDestination(Llama.transform.position);
+                        // Canvas
+                        LlamaCanvas(true, 2);
+                        LlamaWander(false);
+                    }
+                }
+            }
+
+            // Llama剪毛判斷
+            if(LlamaWool)
+            {
+                if(HoldAction.IsScissers)
+                {
+                    HoldThing();
+                    Timer2 = 0.0f;
+                }
+                else
+                {
+                    Timer2 += Time.deltaTime;
+                    if(Timer2 >= 0.3f)
+                    {
+                        LlamaWander(true);
+                    }
+                    else
+                    {
+                        LlamaWander(false);
                     }
                 }
             }
             else
             {
-                Timer1 += Time.deltaTime;
-                if(WantEat)
+                if(GrowWool)
                 {
-                    if(Timer1 >= 5f)
+                    Timer1 += Time.deltaTime;
+                    if(Timer1 <= 0.3f)
                     {
-                        LlamaCanvas(false, 0);
-                        
-                        //隨機找位置
-                        //remainingdistance：距離終點剩餘的移動距離
-                        //stoppingdistance：停止在距目前位置的距離
-                        if(Llama.remainingDistance <= Llama.stoppingDistance)
-                        {
-                            Llama.SetDestination(RandomNavMeshLocation());
-                        }
-                        if(Timer1 >= 30f)
-                        {
-                            WantEat = false;
-                        }
+                        LlamaWander(false);
                     }
-                    else
+                    else if(0.5f < Timer1 && Timer1 < 20.0f)
                     {
-                        LlamaCanvas(true, 2);
-                        Llama.SetDestination(Llama.transform.position);
+                        LlamaWander(true);
                     }
-                }
-                else
-                {
-                    //隨機找位置
-                    if(Llama.remainingDistance <= Llama.stoppingDistance)
+                    else if(Timer1 >= 20.0f)
                     {
-                        Llama.SetDestination(RandomNavMeshLocation());
+                        LlamaWander(true);
+                        GrowWool = false;
+                        LlamaFull = false;
                     }
-                    LlamaSkin.GetComponent<SkinnedMeshRenderer>().material.color = Color.red;
+                    
                 }
             }
         }
-
     }
 
 
     public void EatGrass()
     {
-        if(HoldAction.InHands && HoldAction.IsBarrel && WantEat)
+
+        if(Arrival && !LlamaFull && HoldAction.IsBarrel)
         {
-            if(!LlamaFull)
-            {
-                Destroy(HoldAction.GrassClone);
-                HoldAction.InHands = false;
-                HoldAction.IsBarrel = false;
-            }
+            //Debug.Log("LlamaEat");
+
+            Destroy(HoldAction.GrassClone);
+            HoldAction.InHands = false;
+            HoldAction.IsBarrel = false;
+
+            Arrival = false;
             LlamaFull = true;
-            
-            
         }
+        
+        if(Arrival && LlamaWool && HoldAction.IsScissers)
+        {
+            //Debug.Log("LlamaCut");
+            
+            Arrival = false;
+            Wool(false);
+        }
+
     }
 
 
-    public void HoldGrass()
+    public void HoldThing()
     {
         if(Vector3.Distance(Llama.transform.position, Camera.transform.position) >= StopDis)
         {
             LlamaAnimator(false);
             Llama.destination = Camera.transform.position;
-            WantEat = false;
+            Arrival = false;
         }
         else
         {
-            //走路的llama走進StopDis的範圍內時，導正面向player
-            if(State == 1)
-            {
-                Vector3 LlamaLook = new Vector3(Camera.transform.position.x, 0f, Camera.transform.position.z) - new Vector3(Llama.transform.position.x, 0f, Llama.transform.position.z);
-                Quaternion LookPlayer = Quaternion.LookRotation(LlamaLook);
-                Llama.transform.rotation = Quaternion.Lerp(Llama.transform.rotation, LookPlayer, Time.deltaTime * 5);
-            }
+            // 靠近player時調整視角，讓llama注視著player
+            Vector3 LlamaLook = new Vector3(Camera.transform.position.x, 0.0f, Camera.transform.position.z) - new Vector3(Llama.transform.position.x, 0.0f, Llama.transform.position.z);
+            Quaternion LookPlayer = Quaternion.LookRotation(LlamaLook);
+            Llama.transform.rotation = Quaternion.Lerp(Llama.transform.rotation, LookPlayer, Time.deltaTime * 5);
 
-            //llama會停下來，動畫變成等待餵食
-            //canvas的顯示與否
+            // Canvas
             LlamaCanvas(true, 1);
-
+            // Llama會停下來，做等待的動作
             LlamaAnimator(true);
-            WantEat = true;
-            Timer1 = 0f;
-
+            Arrival = true;
+            Timer1 = 0.0f;
         }
     }
 
 
     public void ReturnOrigin()
     {
+        LlamaCanvas(false, 0);
         LlamaAnimator(false);
         Llama.destination = LlamaOriginPos;
 
-        //轉到原本的轉向
         if(Vector3.Distance(Llama.transform.position, LlamaOriginPos) <= 1)
         {
             if(Llama.transform.eulerAngles.y != LlamaRotationY)
-            {   
+            {
                 Llama.transform.rotation = Quaternion.Lerp(Llama.transform.rotation, LlamaRotation, Time.deltaTime * 5);
             }
             else
@@ -237,13 +289,13 @@ public class LlamaAction : MonoBehaviour
     }
 
 
-     public Vector3 RandomNavMeshLocation()
+    public Vector3 RandomNavMeshLocation()
     {
         LlamaAnimator(false);
         Vector3 FinPos = Vector3.zero;
         Vector3 RandomPos = Random.insideUnitSphere * WalkRadius;
         RandomPos += Llama.transform.position;
-        //SamplePosition：判斷指定的隨機位置是否在NavMesh中的可行走範圍
+        // SamplePosition：判斷指定的隨機位置是否在NavMesh中的可行走範圍
         if(NavMesh.SamplePosition(RandomPos, out NavMeshHit Hit, WalkRadius, 1))
         {
             FinPos = Hit.position;
@@ -251,7 +303,27 @@ public class LlamaAction : MonoBehaviour
         return FinPos;
     }
 
+    public void LlamaWander(bool Wander)
+    {
+        if(Wander)
+        {
+            LlamaCanvas(false, 0);
+            // 隨機找位置
+            // remainingDistance：距離忠鈿剩餘的移動距離
+            // stoppingDistance：停止在距目前位置的距離
+            if(Llama.remainingDistance <= Llama.stoppingDistance)
+            {
+                Llama.SetDestination(RandomNavMeshLocation());
+            }
+        }
+        else
+        {
+            Llama.SetDestination(Llama.transform.position);
+        }
+        
+    }
 
+    
     public void LlamaAnimator(bool Stop)
     {
         if(Stop)
@@ -263,6 +335,20 @@ public class LlamaAction : MonoBehaviour
         {
             Llama.isStopped = false;
             Llama.GetComponent<Animator>().SetBool("Move", true);
+        }
+    }
+
+    public void Wool(bool Wool)
+    {
+        if(Wool)
+        {
+            LlamaWool = true;
+            Llamaskin.GetComponent<SkinnedMeshRenderer>().material.color = Color.red;
+        }
+        else
+        {
+            LlamaWool = false;
+            Llamaskin.GetComponent<SkinnedMeshRenderer>().material.color = Color.white;
         }
     }
 
@@ -281,11 +367,9 @@ public class LlamaAction : MonoBehaviour
             }
         }
         else
-        {
+        {   
             LlamaCanvasGroup.GetComponent<CanvasGroup>().alpha = 0;
         }
     }
-
-
 
 }

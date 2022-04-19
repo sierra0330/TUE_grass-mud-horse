@@ -54,7 +54,7 @@ public class HoldAction : MonoBehaviour
             InHands = true;
 
         }
-        else if(InHands && IsBarrel)
+        else if(InHands && IsBarrel && GrassClone != null)
         {
             //摧毀草
             Destroy(GrassClone);
@@ -73,7 +73,7 @@ public class HoldAction : MonoBehaviour
             IsScissers = true;
             InHands = true;
         }
-        else if(InHands && IsScissers)
+        else if(InHands && IsScissers && Scissors != null)
         {
             Scissors.transform.SetParent(null);
             Scissors.transform.position = ScissorsPos;

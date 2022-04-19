@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3164545}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: LlamaCanvas
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 1810932472}
   m_Layer: 0
   m_Name: Image
-  m_TagString: LlamaImages
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 1180414019}
   m_Layer: 0
   m_Name: Animal
-  m_TagString: Untagged
+  m_TagString: LlamaTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,17 +505,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 9219226732168436584}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.58
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.01
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
+  m_Height: 5.05
+  m_BaseOffset: 0.51
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1180414018
@@ -533,12 +533,10 @@ MonoBehaviour:
   State: 0
   Llama: {fileID: 8300182560183576122}
   StopDis: 5
-  LlamaSkin: {fileID: 8699916008177030237}
   WalkRadius: 10
-  LlamaCanvasGroup: {fileID: 3164540}
-  LlamaImages: {fileID: 1810932470}
   Pic1: {fileID: 21300000, guid: fe8bc7ab03a9575439847dcccf58d7f4, type: 3}
   Pic2: {fileID: 21300000, guid: 8caa3a6a6302b5a47b1f7a4decdcbe19, type: 3}
+  LlamaChild: []
 --- !u!114 &1180414019
 MonoBehaviour:
   m_ObjectHideFlags: 0
