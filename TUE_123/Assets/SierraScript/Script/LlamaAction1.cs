@@ -23,9 +23,11 @@ public class LlamaAction1 : MonoBehaviour
 
     // Canvas
     GameObject LlamaCanvasGroup;
-    GameObject LlamaImages;
+    GameObject LlamaImages1;
+    GameObject LlamaImages2;
     public Sprite Pic1;
     public Sprite Pic2;
+    public Sprite Pic3;
 
     // Llama's state judge
     bool LlamaFull = false;
@@ -62,7 +64,8 @@ public class LlamaAction1 : MonoBehaviour
             //Debug.Log(i + " " + LlamaChild[i]);
             Llamaskin = LlamaChild[6].gameObject;
             LlamaCanvasGroup = LlamaChild[7].gameObject;
-            LlamaImages = LlamaChild[8].gameObject;
+            LlamaImages1 = LlamaChild[8].gameObject;
+            LlamaImages2 = LlamaChild[9].gameObject;
         }
     }
 
@@ -360,11 +363,21 @@ public class LlamaAction1 : MonoBehaviour
             LlamaCanvasGroup.GetComponent<CanvasGroup>().alpha = 1;
             if(Pic == 1)
             {
-                LlamaImages.GetComponent<Image>().sprite = Pic1;
+                LlamaImages1.GetComponent<Image>().enabled = true;
+                LlamaImages2.GetComponent<Image>().enabled = false;
+                LlamaImages1.GetComponent<Image>().sprite = Pic1;
             }
             else if(Pic == 2)
             {
-                LlamaImages.GetComponent<Image>().sprite = Pic2;
+                LlamaImages1.GetComponent<Image>().enabled = true;
+                LlamaImages2.GetComponent<Image>().enabled = false;
+                LlamaImages1.GetComponent<Image>().sprite = Pic2;
+            }
+            else if(Pic == 3)
+            {
+                LlamaImages1.GetComponent<Image>().enabled = false;
+                LlamaImages2.GetComponent<Image>().enabled = true;
+                LlamaImages2.GetComponent<Image>().sprite = Pic3;
             }
         }
         else
@@ -410,6 +423,8 @@ public class LlamaAction1 : MonoBehaviour
         if(PressDown && TowardLlama)
         {
             //Debug.Log(PressDownTime);
+            LlamaCanvas(true, 3);
+            LlamaImages2.GetComponent<Image>().fillAmount = PressDownTime / HoldTime;
             PressDownTime += Time.deltaTime;
             if(PressDownTime >= HoldTime)
             {
